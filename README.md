@@ -2,7 +2,7 @@
 
 [![Tests](https://github.com/leezhengjing/algo-practice/actions/workflows/run_tests.yml/badge.svg)](https://github.com/leezhengjing/algo-practice/actions/workflows/run_tests.yml)
 [![Pages](https://img.shields.io/badge/GitHub%20Pages-Live-blue?logo=github)](https://leezhengjing.github.io/algo-practice/)
-[![Languages](https://img.shields.io/badge/Languages-Python%20%7C%20C%2B%2B%20%7C%20JavaScript-brightgreen)](#)
+[![Languages](https://img.shields.io/badge/Languages-Python%20%7C%20C%2B%2B%20%7C%20JavaScript%20%7C%20TypeScript-brightgreen)](#)
 
 > 🚀 **Live Dashboard**: [View Results & Solutions](https://leezhengjing.github.io/algo-practice/)
 
@@ -10,7 +10,7 @@ Welcome to my algorithm practice repository! This project automatically tests co
 
 ## ✨ Features
 
-- 🔄 **Multi-language Support**: Solutions in Python, C++, and JavaScript
+- 🔄 **Multi-language Support**: Solutions in Python, C++, JavaScript, and TypeScript
 - 🧪 **Automated Testing**: Comprehensive test suite with JSON-based test cases
 - 📊 **Live Dashboard**: Interactive web interface with syntax-highlighted code
 - 🎨 **Beautiful UI**: Clean, responsive design with status indicators
@@ -26,11 +26,13 @@ algo-practice/
 │   │   ├── attempt.py          # Python solution
 │   │   ├── attempt.cpp         # C++ solution
 │   │   ├── attempt.js          # JavaScript solution
+│   │   ├── attempt.ts          # TypeScript solution
 │   │   └── tests.json          # Test cases
 │   └── vanilla_binary_search/
 │       ├── attempt.py
 │       ├── attempt.cpp
 │       ├── attempt.js
+│       ├── attempt.ts
 │       └── tests.json
 ├── test_runner/                 # Test execution engine
 │   ├── main.py                 # Main test runner
@@ -68,6 +70,7 @@ algo-practice/
    - `attempt.py` (Python)
    - `attempt.cpp` (C++)
    - `attempt.js` (JavaScript)
+   - `attempt.ts` (TypeScript)
 3. Create `tests.json` with test cases:
    ```json
    {
