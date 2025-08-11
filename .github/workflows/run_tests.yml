@@ -19,18 +19,21 @@ jobs:
           sudo apt-get install -y g++ nodejs python3
 
       - name: Run tests
-        run: |
-          python3 test_runner/main.py
+        run: python3 test_runner/main.py
 
-      - name: Upload results artifact
-        uses: actions/upload-artifact@v3
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v1
         with:
-          name: results
           path: results
 
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+    steps:
       - name: Deploy to GitHub Pages
-        if: github.ref == 'refs/heads/main'
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./results
+        uses: actions/deploy-pages@v1
