@@ -1,19 +1,19 @@
 "use strict";
 
 class Node {
-	constructor(val, left = null, right = null) {
-		self.val = val;
-		self.left = left;
-		self.right = right;
-	}
+    constructor(val, left = null, right = null) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
+    }
 }
 
 function postOrderTraversal(root) {
-	if (root !== null) {
-		postOrderTraversal(root.left);
-		postOrderTraversal(root.right);
-		console.log(root.val);
-	}
+    if (root !== null) {
+        postOrderTraversal(root.left);
+        postOrderTraversal(root.right);
+        console.log(root.val);
+    }
 }
 
 // this function builds a tree from input; you don't have to modify it
@@ -35,7 +35,7 @@ function* main() {
     postOrderTraversal(root);
 }
 
-class EOFError extends Error {}
+class EOFError extends Error { }
 {
     const gen = main();
     const next = (line) => gen.next(line).done && process.exit();
