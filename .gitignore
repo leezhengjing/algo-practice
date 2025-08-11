@@ -1,0 +1,22 @@
+# Ignore generated test results
+results/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Node modules (if you use node in the repo)
+node_modules/
+
+# Build output (if any)
+dist/
+build/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Editor/IDE settings
+.vscode/
+.idea/
