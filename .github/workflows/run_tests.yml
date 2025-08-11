@@ -21,6 +21,12 @@ jobs:
       - name: Run tests
         run: python3 test_runner/main.py
 
+      - name: Upload test results artifact (optional)
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: results/results.json
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v1
         with:
