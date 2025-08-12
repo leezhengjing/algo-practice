@@ -1,0 +1,16 @@
+{
+    "tests": [
+        {
+            "input": "6 4 3 x x 5 x x 8 x x\n4\n8\n6\n4\n8\n3\n5",
+            "output": "6"
+        },
+        {
+            "input": "6 4 3 x x 5 x x 8 x x\n4\n6\n6\n4\n8\n3\n5",
+            "output": "6"
+        },
+        {
+            "input": "6 4 3 x x 5 x x 8 x x\n3\n5\n6\n4\n8\n3\n5",
+            "output": "4"
+        }
+    ]
+}

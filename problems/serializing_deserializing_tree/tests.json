@@ -1,0 +1,20 @@
+{
+    "tests": [
+        {
+            "input": "6 4 3 x x 5 x x 8 x x\n6\n4\n8\n3\n5",
+            "output": "6 4 3 x x 5 x x 8 x x\n6\n4\n8\n3\n5"
+        },
+        {
+            "input": "1 2 x x 3 x x\n1\n2\n3",
+            "output": "1 2 x x 3 x x\n1\n2\n3"
+        },
+        {
+            "input": "10 86 x x 100 x x\n10\n86\n100",
+            "output": "10 86 x x 100 x x\n10\n86\n100"
+        },
+        {
+            "input": "x",
+            "output": "x"
+        }
+    ]
+}

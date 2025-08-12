@@ -1,0 +1,28 @@
+{
+    "tests": [
+        {
+            "input": "8 4 2 1 x x 3 x x 6 x x 12 10 x x 14 x 15 x x\n7\n8\n4\n12\n2\n6\n10\n14\n1\n3\n15",
+            "output": "8 4 2 1 x x 3 x x 6 x 7 x x 12 10 x x 14 x 15 x x"
+        },
+        {
+            "input": "37 19 2 x x 28 23 x x 35 x x 44 x 58 52 x x 67 x x\n42\n37\n19\n44\n2\n28\n58\n23\n35\n52\n67",
+            "output": "37 19 2 x x 28 23 x x 35 x x 44 42 x x 58 52 x x 67 x x\n37\n19\n44\n2\n28\n42\n58\n23\n35\n52\n67"
+        },
+        {
+            "input": "421 223 79 42 x x 157 133 x x x 327 x 404 356 x x 415 x x 741 626 x x 887 801 795 x x 842 x x 903 x 977 x x\n404\n421\n223\n741\n79\n327\n626\n887\n42\n157\n404\n133\n356\n415\n801\n903\n795\n842\n977",
+            "output": "421 223 79 42 x x 157 133 x x x 327 x 404 356 x x 415 x x 741 626 x x 887 801 795 x x 842 x x 903 x 977 x x\n421\n223\n741\n79\n327\n626\n887\n42\n157\n404\n133\n356\n415\n801\n903\n795\n842\n977"
+        },
+        {
+            "input": "13 7 5 2 x x x 9 x x 15 14 x x 16 x 18 x x\n12\n13\n7\n15\n5\n9\n14\n16\n2\n18",
+            "output": "13 7 5 2 x x x 9 x 12 x x 15 14 x x 16 x 18 x x\n13\n7\n15\n5\n9\n14\n16\n2\n12\n18"
+        },
+        {
+            "input": "x\n18",
+            "output": "18 x x\n18"
+        },
+        {
+            "input": "37 19 2 x x 28 23 x x 35 x x 44 x 58 52 x x 67 x x\n84\n37\n19\n44\n2\n28\n58\n23\n35\n52\n67",
+            "output": "37 19 2 x x 28 23 x x 35 x x 44 x 58 52 x x 67 x 84 x x\n37\n19\n44\n2\n28\n58\n23\n35\n52\n67\n84"
+        }
+    ]
+}

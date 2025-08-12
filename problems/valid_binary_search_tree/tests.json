@@ -1,0 +1,28 @@
+{
+    "tests": [
+        {
+            "input": "6 4 3 x x 5 x x 8 x x\n6\n4\n8\n3\n5",
+            "output": "true"
+        },
+        {
+            "input": "6 4 3 x x 8 x x 8 x x\n6\n4\n8\n3\n8",
+            "output": "false"
+        },
+        {
+            "input": "1 2 x x 3 x x\n1\n2\n3",
+            "output": "false"
+        },
+        {
+            "input": "x",
+            "output": "true"
+        },
+        {
+            "input": "3 2 1 x x x 4 x 5 x x\n3\n2\n4\n1\n5",
+            "output": "true"
+        },
+        {
+            "input": "6 5 x 4 x x x\n6\n5\n4",
+            "output": "false"
+        }
+    ]
+}
