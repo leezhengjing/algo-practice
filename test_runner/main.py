@@ -157,9 +157,21 @@ html_content = """<html>
 
 # Calculate overall statistics
 total_problems = len(results)
-total_tests = sum(len([l for l in langs.values() if "Pass" in l or "Fail" in l]) for langs in results.values())
-total_passed = sum(len([l for l in langs.values() if "Pass" in l]) for langs in results.values())
-total_missing = sum(len([l for l in langs.values() if "Missing" in l]) for langs in results.values())
+
+# Count solutions properly
+total_solutions = 0
+total_passed = 0
+total_attempted = 0
+
+for prob, langs in results.items():
+    for lang, status in langs.items():
+        total_solutions += 1  # Every language slot counts
+        if "Pass" in status:
+            total_passed += 1
+            total_attempted += 1
+        elif "Fail" in status:
+            total_attempted += 1
+        # "Missing" doesn't count as attempted
 
 # Add overall stats
 html_content += f"""
@@ -170,15 +182,15 @@ html_content += f"""
                     <div class="overall-label">Total Problems</div>
                 </div>
                 <div class="overall-stat">
+                    <div class="overall-number">{total_attempted}</div>
+                    <div class="overall-label">Solutions Attempted</div>
+                </div>
+                <div class="overall-stat">
                     <div class="overall-number">{total_passed}</div>
                     <div class="overall-label">Solutions Passing</div>
                 </div>
                 <div class="overall-stat">
-                    <div class="overall-number">{total_tests - total_missing}</div>
-                    <div class="overall-label">Solutions Attempted</div>
-                </div>
-                <div class="overall-stat">
-                    <div class="overall-number">{round(total_passed/max(total_tests-total_missing, 1)*100)}%</div>
+                    <div class="overall-number">{round(total_passed/max(total_attempted, 1)*100)}%</div>
                     <div class="overall-label">Success Rate</div>
                 </div>
             </div>
