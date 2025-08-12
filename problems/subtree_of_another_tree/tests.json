@@ -1,0 +1,12 @@
+{
+    "tests": [
+        {
+            "input": "3 4 1 x x 2 x x 5 x x\n4 1 x x 2 x x\n3\n4\n5\n1\n2\n4\n1\n2",
+            "output": "true"
+        },
+        {
+            "input": "3 4 1 x x 2 0 x x x 5 x x\n4 1 x x 2 x x\n3\n4\n5\n1\n2\n0\n4\n1\n2",
+            "output": "false"
+        }
+    ]
+}

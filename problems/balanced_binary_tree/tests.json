@@ -1,0 +1,32 @@
+{
+    "tests": [
+        {
+            "input": "1 2 4 x 7 x x 5 x x 3 x 6 x x\n1\n2\n3\n4\n5\n6\n7",
+            "output": "true"
+        },
+        {
+            "input": "1 2 4 x 7 x x 5 x x 3 x 6 8 x x x\n1\n2\n3\n4\n5\n6\n7\n8",
+            "output": "false"
+        },
+        {
+            "input": "1 2 3 x x 4 x 6 x x 5 x x\n1\n2\n5\n3\n4\n6",
+            "output": "false"
+        },
+        {
+            "input": "1 2 3 x x 4 x 6 x x 5 x 7 x x\n1\n2\n5\n3\n4\n7\n6",
+            "output": "true"
+        },
+        {
+            "input": "1 2 3 x x 4 x x 5 6 x 7 x x x\n1\n2\n5\n3\n4\n6\n7",
+            "output": "false"
+        },
+        {
+            "input": "1 2 3 7 x x x 4 x x 5 6 x x x\n1\n2\n5\n3\n4\n6\n7",
+            "output": "true"
+        },
+        {
+            "input": "1 2 3 4 x x 4 x x 3 x x 2 x x\n1\n2\n2\n3\n3\n4\n4",
+            "output": "false"
+        }
+    ]
+}
