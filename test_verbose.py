@@ -59,7 +59,17 @@ def run_tests_verbose():
         problems_to_test = [sys.argv[1]]
         print(f"🎯 Testing specific problem: {problems_to_test[0]}")
     else:
-        problems_to_test = [p for p in os.listdir("problems") if os.path.isdir(os.path.join("problems", p))]
+        # Find all problems recursively
+        problems_to_test = []
+        for root, dirs, files in os.walk("problems"):
+            # Skip the root problems directory itself
+            if root == "problems":
+                continue
+            # Check if this directory contains tests.json
+            if "tests.json" in files:
+                problem_name = os.path.relpath(root, "problems")
+                problems_to_test.append(problem_name)
+        
         print(f"🚀 Testing all {len(problems_to_test)} problems")
     
     print("=" * 80)
@@ -70,6 +80,7 @@ def run_tests_verbose():
     for problem in sorted(problems_to_test):
         problem_path = os.path.join("problems", problem)
         if not os.path.isdir(problem_path):
+            print(f"⚠️  {problem}: Directory not found")
             continue
         
         tests_path = os.path.join(problem_path, "tests.json")
