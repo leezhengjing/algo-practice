@@ -1,0 +1,5 @@
+{
+    "description": "DFS template for binary tree search - finds target node and returns it",
+    "type": "template",
+    "tests": []
+}

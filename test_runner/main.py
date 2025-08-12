@@ -25,6 +25,10 @@ for problem in os.listdir("problems"):
     with open(tests_path) as f:
         tests_data = json.load(f)
     
+    # Skip if no tests (for templates/snippets)
+    if not tests_data.get("tests") or len(tests_data["tests"]) == 0:
+        continue
+    
     results[problem] = {}
     
     for ext, runner in LANG_RUNNERS.items():

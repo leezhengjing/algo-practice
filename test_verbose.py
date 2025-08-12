@@ -85,6 +85,13 @@ def run_tests_verbose():
             print(f"❌ {problem}: Error loading tests.json: {e}")
             continue
         
+        # Skip if no tests (for templates/snippets)
+        if not tests_data.get("tests") or len(tests_data["tests"]) == 0:
+            template_type = tests_data.get("type", "snippet")
+            description = tests_data.get("description", "No description")
+            print(f"📝 {problem}: {template_type.title()} - {description}")
+            continue
+        
         print(f"\n📁 Problem: {problem}")
         print("-" * 60)
         
